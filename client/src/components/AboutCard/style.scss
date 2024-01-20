@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+
+.card {
+  width: 90%;
+  margin: auto;
+  height: clamp(189px, 88.31591999999999vw, 756px);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+
+  &__img {
+    margin-top: clamp(16px, 7.47648vw, 64px);
+    width: 90px;
+    height: 90px;
+  }
+
+  &__text {
+    margin-top: clamp(8px, 3.73824vw, 32px);
+    width: 70%;
+  }
+
+  &__main {
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(12px, 5.60736vw, 48px);
+    font-weight: 500;
+  }
+
+  &__par {
+    margin: auto;
+    font-size: clamp(8.5px, 3.9718799999999996vw, 34px);
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-top: clamp(8px, 3.73824vw, 32px);
+    margin-bottom: clamp(16px, 7.47648vw, 64px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: clamp(192.5px, 20.0508vw, 770px);
+    height: auto;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+    padding-top: clamp(16px, 1.66656vw, 64px);
+    padding-bottom: clamp(16px, 1.66656vw, 64px);
+    &__img {
+      margin-top: 1px;
+      width: clamp(46.5px, 4.84344vw, 186px);
+      height: clamp(46.5px, 4.84344vw, 186px);
+      margin-right: clamp(92.5px, 9.6348vw, 370px);
+    }
+
+    &__text {
+      margin-top: clamp(8px, 0.83328vw, 32px);
+    }
+
+    &__main {
+      font-size: clamp(12px, 1.24992vw, 48px);
+      text-align: left;
+      width: 80%;
+      line-height: clamp(19.34px, 2.0144544vw, 77.36px);
+    }
+
+    &__par {
+      margin-top: clamp(8px, 0.83328vw, 32px);
+      font-size: clamp(8.5px, 0.88536vw, 34px);
+      text-align: left;
+      margin-bottom: clamp(-2.5px, -0.2604vw, -10px);
+    }
+  }
+}

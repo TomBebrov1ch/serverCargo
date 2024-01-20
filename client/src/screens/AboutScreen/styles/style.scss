@@ -1,0 +1,143 @@
+@import "../../../styles/variables.scss";
+
+.about {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  background-color: $green;
+
+  &__separatop {
+    border: 3px solid $gold;
+    width: clamp(75px, 35.046vw, 300px);
+    position: relative;
+    top: clamp(8px, 3.73824vw, 32px);
+    margin: auto;
+  }
+
+  &__vagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: $white2;
+    margin-top: clamp(16px, 7.47648vw, 64px);
+    padding-bottom: clamp(16px, 7.47648vw, 64px);
+  }
+
+  &__text-s {
+    color: $dark;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: clamp(21px, 9.81288vw, 84px);
+    line-height: clamp(25px, 11.681999999999999vw, 100px);
+    margin-top: clamp(8px, 3.73824vw, 32px);
+  }
+
+  &__par-s {
+    font-family: "Open Sans", sans-serif;
+    line-height: clamp(12.895px, 6.0255756vw, 51.58px);
+    color: $dark;
+    text-align: center;
+    width: 90%;
+    padding-top: clamp(16px, 7.47648vw, 64px);
+    font-size: clamp(8px, 3.73824vw, 32px);
+    padding-bottom: clamp(16px, 7.47648vw, 64px);
+    margin: auto;
+  }
+
+  &__advant {
+    background-image: url("../../../assets/Group-43.webp");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: clamp(16px, 7.47648vw, 64px);
+
+    &__btn {
+      background-color: $gold;
+      border: none;
+      padding: clamp(7.5px, 3.5046vw, 30px);
+      width: clamp(140px, 65.41919999999999vw, 560px);
+      padding-left: clamp(30px, 14.0184vw, 120px);
+      padding-right: clamp(30px, 14.0184vw, 120px);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: clamp(9px, 4.20552vw, 36px);
+      text-align: center;
+      transition: 0.3s ease;
+      margin-top: clamp(16px, 7.47648vw, 64px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    background-image: url(../../../assets/about_bg.webp);
+    &__separatop {
+      margin-top: clamp(0.5px, 0.05208vw, 2px);
+    }
+    .about__card-pc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex-direction: row;
+      gap: clamp(16px, 1.66656vw, 64px);
+    }
+
+    &__vagon {
+      width: 100%;
+
+      &__content {
+        width: 86.6%;
+      }
+
+      &__card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        gap: clamp(16px, 1.66656vw, 64px);
+      }
+    }
+
+    &__text-s {
+      text-align: left;
+      font-size: clamp(20px, 2.0832vw, 80px);
+    }
+
+    &__par-s {
+      text-align: left;
+      font-size: clamp(9px, 0.93744vw, 36px);
+      width: 42%;
+      line-height: clamp(16.12px, 1.6790592000000002vw, 64.48px);
+      margin-top: clamp(8px, 0.83328vw, 32px);
+    }
+    &__vagon__card {
+    }
+
+    &__advant {
+      background-image: url("../../../assets/features_bg.webp");
+      width: clamp(960px, 99.9936vw, 3840px);
+      height: auto;
+
+      &__btn {
+        width: clamp(130px, 13.5408vw, 520px);
+        padding: clamp(7.5px, 0.7812vw, 30px);
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(10px, 1.0416vw, 40px);
+      }
+    }
+
+    &__advant__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
+}

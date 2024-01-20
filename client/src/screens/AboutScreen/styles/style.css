@@ -1,0 +1,125 @@
+.about {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  background-color: #025a42;
+}
+.about__separatop {
+  border: 3px solid #d9a441;
+  width: clamp(75px, 35.046vw, 300px);
+  position: relative;
+  top: clamp(8px, 3.73824vw, 32px);
+  margin: auto;
+}
+.about__vagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px);
+}
+.about__text-s {
+  color: #152731;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: clamp(21px, 9.81288vw, 84px);
+  line-height: clamp(25px, 11.682vw, 100px);
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.about__par-s {
+  font-family: "Open Sans", sans-serif;
+  line-height: clamp(12.895px, 6.0255756vw, 51.58px);
+  color: #152731;
+  text-align: center;
+  width: 90%;
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  font-size: clamp(8px, 3.73824vw, 32px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px);
+  margin: auto;
+}
+.about__advant {
+  background-image: url("../../../assets/Group-43.webp");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: clamp(16px, 7.47648vw, 64px);
+}
+.about__advant__btn {
+  background-color: #d9a441;
+  border: none;
+  padding: clamp(7.5px, 3.5046vw, 30px);
+  width: clamp(140px, 65.4192vw, 560px);
+  padding-left: clamp(30px, 14.0184vw, 120px);
+  padding-right: clamp(30px, 14.0184vw, 120px);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  text-align: center;
+  transition: 0.3s ease;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    background-image: url(../../../assets/about_bg.webp);
+  }
+  .about__separatop {
+    margin-top: clamp(0.5px, 0.05208vw, 2px);
+  }
+  .about .about__card-pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: clamp(16px, 1.66656vw, 64px);
+  }
+  .about__vagon {
+    width: 100%;
+  }
+  .about__vagon__content {
+    width: 86.6%;
+  }
+  .about__vagon__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: clamp(16px, 1.66656vw, 64px);
+  }
+  .about__text-s {
+    text-align: left;
+    font-size: clamp(20px, 2.0832vw, 80px);
+  }
+  .about__par-s {
+    text-align: left;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    width: 42%;
+    line-height: clamp(16.12px, 1.6790592vw, 64.48px);
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .about__advant {
+    background-image: url("../../../assets/features_bg.webp");
+    width: clamp(960px, 99.9936vw, 3840px);
+    height: auto;
+  }
+  .about__advant__btn {
+    width: clamp(130px, 13.5408vw, 520px);
+    padding: clamp(7.5px, 0.7812vw, 30px);
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(10px, 1.0416vw, 40px);
+  }
+  .about__advant__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */

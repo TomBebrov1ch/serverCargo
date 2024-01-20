@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+
+  &__item {
+    background-color: $gold;
+    border: none;
+    padding: clamp(7.5px, 3.5046vw, 30px);
+    width: clamp(125px, 58.41vw, 500px);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: clamp(10px, 4.6728vw, 40px);
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  &__img {
+    position: relative;
+    top: clamp(1.5px, 0.70092vw, 6px);
+  }
+
+  &__text {
+    position: relative;
+    left: clamp(3px, 1.40184vw, 12px);
+  }
+}
+
+.button__item:hover {
+  background-color: $gold2;
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    position: relative;
+
+    &__item {
+      width: clamp(130px, 13.5408vw, 520px);
+      padding: clamp(7.5px, 0.7812vw, 30px);
+      background-color: $gold;
+      border: none;
+      color: $dark;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(10px, 1.0416vw, 40px);
+
+    }
+
+    &__img {
+      position: absolute;
+      top: clamp(10px, 1.0416vw, 40px);
+      left: clamp(17.5px, 1.8228vw, 70px);
+    }
+
+    &__text {
+      position: relative;
+      left: clamp(3px, 1.40184vw, 12px);
+    }
+  }
+}

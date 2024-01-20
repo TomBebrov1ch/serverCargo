@@ -1,0 +1,125 @@
+@import "../../../styles/variables.scss";
+
+.quest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__nav {
+  }
+
+  &__text {
+    color: $dark;
+    font-family: "Rubik", sans-serif;
+    padding-top: clamp(16px, 7.47648vw, 64px);
+    padding-bottom: clamp(8px, 3.73824vw, 32px);
+    font-weight: 600;
+    font-size: clamp(21px, 9.81288vw, 84px);
+    line-height: clamp(25px, 11.681999999999999vw, 100px);
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+
+  &__par {
+    font-family: "Open Sans", sans-serif;
+    line-height: clamp(12.895px, 6.0255756vw, 51.58px);
+    color: $dark;
+    text-align: center;
+    width: 90%;
+    padding-top: clamp(8px, 3.73824vw, 32px);
+    font-size: clamp(8px, 3.73824vw, 32px);
+    margin-bottom: clamp(16px, 7.47648vw, 64px);
+    margin: auto;
+  }
+
+  &__contacts {
+    display: none;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__separator {
+    display: flex;
+    border: 3px solid $gold;
+    width: clamp(75px, 35.046vw, 300px);
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .quest {
+    &__content {
+      width: 86.6%;
+      height: clamp(285px, 29.6856vw, 1140px);
+      display: block;
+
+      &__text {
+        margin-top: clamp(32px, 3.33312vw, 128px);
+        color: $dark;
+        font-family: "Rubik", sans-serif;
+        font-size: clamp(24px, 2.49984vw, 96px);
+        text-align: left;
+        line-height: clamp(28.44px, 2.9623104000000002vw, 113.76px);
+      }
+
+      &__separator {
+        display: flex;
+        border: 3px solid $gold;
+        width: clamp(75px, 35.046vw, 300px);
+        margin-top: clamp(8px, 3.73824vw, 32px);
+      }
+
+      &__par {
+        margin-top: clamp(8px, 3.73824vw, 32px);
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(10px, 1.0416vw, 40px);
+        text-align: left;
+        width: 50%;
+        line-height: clamp(16.12px, 1.6790592000000002vw, 64.48px);
+      }
+    }
+
+    &__separator {
+      display: none;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__par {
+      display: none;
+    }
+
+    &__contacts {
+      display: flex;
+      gap: clamp(12.5px, 1.302vw, 50px);
+      margin-top: clamp(16px, 1.66656vw, 64px);
+
+      &__f {
+        display: flex;
+        gap: clamp(5px, 0.5208vw, 20px);
+        font-size: clamp(10px, 1.0416vw, 40px);
+        font-family: "Open Sans", sans-serif;
+      }
+
+      &__s {
+        display: flex;
+        gap: clamp(5px, 0.5208vw, 20px);
+        font-size: clamp(10px, 1.0416vw, 40px);
+        font-family: "Open Sans", sans-serif;
+      }
+
+      &__i {
+        width: clamp(17.5px, 1.8228vw, 70px);
+        height: clamp(17.5px, 1.8228vw, 70px);
+        position: relative;
+        bottom: clamp(1.5px, 0.15624vw, 6px);
+      }
+    }
+  }
+}

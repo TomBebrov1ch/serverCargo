@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.vagon {
+  position: relative;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+
+  &__img {
+    width: clamp(193px, 90.18504vw, 772px);
+    height: clamp(193px, 90.18504vw, 772px);
+  }
+
+  &__text {
+    position: absolute;
+    left: clamp(15px, 7.0092vw, 60px);
+    bottom: clamp(15px, 7.0092vw, 60px);
+    font-weight: 600;
+    font-size: clamp(15px, 7.0092vw, 60px);
+    font-family: "Rubik", sans-serif;
+    color: $white2;
+    line-height: clamp(20.74px, 9.6913872vw, 82.96px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .vagon {
+    margin-top: clamp(-16px, -1.66656vw, -64px);
+    &__text {
+      font-size: clamp(17.5px, 1.8228vw, 70px);
+      font-weight: 500;
+    }
+
+    &__img {
+      width: clamp(194px, 20.20704vw, 776px);
+      height: clamp(194px, 20.20704vw, 776px);
+    }
+  }
+}

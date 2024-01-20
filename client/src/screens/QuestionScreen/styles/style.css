@@ -1,0 +1,103 @@
+.quest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.quest__text {
+  color: #152731;
+  font-family: "Rubik", sans-serif;
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(8px, 3.73824vw, 32px);
+  font-weight: 600;
+  font-size: clamp(21px, 9.81288vw, 84px);
+  line-height: clamp(25px, 11.682vw, 100px);
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+.quest__par {
+  font-family: "Open Sans", sans-serif;
+  line-height: clamp(12.895px, 6.0255756vw, 51.58px);
+  color: #152731;
+  text-align: center;
+  width: 90%;
+  padding-top: clamp(8px, 3.73824vw, 32px);
+  font-size: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
+  margin: auto;
+}
+.quest__contacts {
+  display: none;
+}
+.quest__content {
+  display: none;
+}
+.quest__separator {
+  display: flex;
+  border: 3px solid #d9a441;
+  width: clamp(75px, 35.046vw, 300px);
+  margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .quest__content {
+    width: 86.6%;
+    height: clamp(285px, 29.6856vw, 1140px);
+    display: block;
+  }
+  .quest__content__text {
+    margin-top: clamp(32px, 3.33312vw, 128px);
+    color: #152731;
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(24px, 2.49984vw, 96px);
+    text-align: left;
+    line-height: clamp(28.44px, 2.9623104vw, 113.76px);
+  }
+  .quest__content__separator {
+    display: flex;
+    border: 3px solid #d9a441;
+    width: clamp(75px, 35.046vw, 300px);
+    margin-top: clamp(8px, 3.73824vw, 32px);
+  }
+  .quest__content__par {
+    margin-top: clamp(8px, 3.73824vw, 32px);
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    text-align: left;
+    width: 50%;
+    line-height: clamp(16.12px, 1.6790592vw, 64.48px);
+  }
+  .quest__separator {
+    display: none;
+  }
+  .quest__text {
+    display: none;
+  }
+  .quest__par {
+    display: none;
+  }
+  .quest__contacts {
+    display: flex;
+    gap: clamp(12.5px, 1.302vw, 50px);
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .quest__contacts__f {
+    display: flex;
+    gap: clamp(5px, 0.5208vw, 20px);
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-family: "Open Sans", sans-serif;
+  }
+  .quest__contacts__s {
+    display: flex;
+    gap: clamp(5px, 0.5208vw, 20px);
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-family: "Open Sans", sans-serif;
+  }
+  .quest__contacts__i {
+    width: clamp(17.5px, 1.8228vw, 70px);
+    height: clamp(17.5px, 1.8228vw, 70px);
+    position: relative;
+    bottom: clamp(1.5px, 0.15624vw, 6px);
+  }
+}/*# sourceMappingURL=style.css.map */

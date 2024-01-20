@@ -1,0 +1,156 @@
+@import "../../styles/variables.scss";
+
+footer {
+  width: 100%;
+}
+
+.footer_m {
+  padding-bottom: clamp(16px, 7.47648vw, 64px);
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: clamp(32px, 14.95296vw, 128px);
+
+  &__logo {
+    width: clamp(61px, 28.50408vw, 244px);
+    height: clamp(49.5px, 23.13036vw, 198px);
+    margin-bottom: clamp(7.5px, 3.5046vw, 30px);
+  }
+
+  &__text {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    line-height: clamp(14.22px, 6.6447216vw, 56.88px);
+    color: $white;
+    text-align: center;
+    font-size: clamp(12px, 5.60736vw, 48px);
+    margin-top: clamp(8px, 3.73824vw, 32px);
+  }
+
+  &__btn {
+    padding: clamp(7.5px, 3.5046vw, 30px);
+    width: clamp(125px, 58.41vw, 500px);
+    border: none;
+    border-radius: 30px;
+    background-color: $white;
+    color: $green;
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(9px, 4.20552vw, 36px);
+    font-weight: 500;
+    margin-top: clamp(16px, 7.47648vw, 64px);
+  }
+
+  &__separator {
+    margin-top: clamp(32px, 14.95296vw, 128px);
+    border: 1px solid $white;
+    width: clamp(190px, 88.7832vw, 760px);
+  }
+
+  &__com {
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(9px, 4.20552vw, 36px);
+    color: $white;
+    opacity: 0.5;
+    line-height: clamp(10.665px, 4.9835411999999994vw, 42.66px);
+    font-weight: 400;
+    margin-top: clamp(8px, 3.73824vw, 32px);
+    text-align: center;
+  }
+}
+.footer__items-pc {
+  display: none;
+}
+.footer {
+  display: none;
+}
+
+.footer_m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $green;
+  &__logo {
+    width: clamp(61px, 28.50408vw, 244px);
+    height: clamp(49.5px, 23.13036vw, 198px);
+    margin-bottom: clamp(7.5px, 3.5046vw, 30px);
+  }
+  &__nav {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+  }
+
+  .footer_m {
+    display: none;
+  }
+  .footer__items-pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $green;
+  }
+  .footer__separator-pc {
+    border: 1px solid $white;
+    width: 86.6%;
+    opacity: 0.5;
+  }
+  .footer__com-pc {
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(10.5px, 1.09368vw, 42px);
+    color: $white;
+    opacity: 0.5;
+    line-height: clamp(12.445px, 1.2962712vw, 49.78px);
+    font-weight: 400;
+    margin-top: clamp(8px, 3.73824vw, 32px);
+    text-align: center;
+    margin-bottom: clamp(16px, 1.66656vw, 64px);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: $green;
+    padding-bottom: clamp(16px, 1.66656vw, 64px);
+    padding-top: clamp(16px, 1.66656vw, 64px);
+    &__logo {
+      width: clamp(69px, 7.1870400000000005vw, 276px);
+      height: clamp(47.495px, 4.9470792vw, 189.98px);
+      position: relative;
+      left: clamp(32px, 3.33312vw, 128px);
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+    }
+    &__text {
+      font-size: clamp(10.5px, 1.09368vw, 42px);
+      text-indent: clamp(16px, 1.66656vw, 64px);
+      font-family: "Rubik", sans-serif;
+      color: $white;
+      font-size: clamp(10.5px, 1.09368vw, 42px);
+      font-weight: 400;
+    }
+
+    &__btn {
+      width: clamp(130px, 13.5408vw, 520px);
+      padding: clamp(7.5px, 0.7812vw, 30px);
+      background-color: $white;
+      border: none;
+      color: $green;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(10px, 1.0416vw, 40px);
+      border-radius: 40px;
+      position: relative;
+      left: clamp(160px, 16.6656vw, 640px);
+    }
+  }
+}
