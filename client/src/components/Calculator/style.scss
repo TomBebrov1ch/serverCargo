@@ -32,20 +32,19 @@
     position: absolute;
     width: clamp(12px, 5.60736vw, 48px);
     height: clamp(12px, 5.60736vw, 48px);
-    bottom: clamp(8.5px, 3.9718799999999996vw, 34px);
-    left: clamp(5px, 2.3364vw, 20px);
+    bottom: clamp(9.5px, 4.439159999999999vw, 38px);
+    // left: clamp(5px, 2.3364vw, 20px);
   }
 
   &__item {
     padding: clamp(10px, 4.6728vw, 40px);
-    padding-left: clamp(32.5px, 15.186599999999999vw, 130px);
-    padding-right: clamp(32.5px, 15.186599999999999vw, 130px);
+    width: clamp(155px, 72.4284vw, 620px);
     border: none;
     text-align: left;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: clamp(8px, 3.73824vw, 32px);
-    text-indent: clamp(-22.5px, -10.5138vw, -90px);
+    text-indent: clamp(5px, 2.3364vw, 20px);
   }
 
   &__item-s {

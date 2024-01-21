@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.auto {
+  position: absolute;
+  background-color: $white;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  &__item {
+    width: 100%;
+    margin: clamp(8px, 3.73824vw, 32px);
+    list-style: none;
+    font-weight: 400;
+    font-size: clamp(8.5px, 3.9718799999999996vw, 34px);
+    font-family: "Open Sans", sans-serif;
+  }
+}
