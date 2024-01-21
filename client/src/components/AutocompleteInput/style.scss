@@ -1,12 +1,21 @@
 @import "../../styles/variables.scss";
 
 .auto {
+  height: auto;
+  max-height: clamp(112.5px, 52.568999999999996vw, 450px);
   position: absolute;
   background-color: $white;
   z-index: 3;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  width: 100%;
+  transition: 0.3s all;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &:hover {
+    background-color: #e1e1e1;
+  }
   &__item {
     width: 100%;
     margin: clamp(8px, 3.73824vw, 32px);
@@ -14,5 +23,16 @@
     font-weight: 400;
     font-size: clamp(8.5px, 3.9718799999999996vw, 34px);
     font-family: "Open Sans", sans-serif;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .auto {
+    width: clamp(175px, 18.228vw, 700px);
+    max-height: clamp(95px, 9.8952vw, 380px);
+    &__item {
+      font-size: clamp(8px, 0.83328vw, 32px);
+      margin-top: clamp(4px, 0.41664vw, 16px);
+    }
   }
 }

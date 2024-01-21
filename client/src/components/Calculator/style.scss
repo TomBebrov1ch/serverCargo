@@ -33,7 +33,14 @@
     width: clamp(12px, 5.60736vw, 48px);
     height: clamp(12px, 5.60736vw, 48px);
     bottom: clamp(9.5px, 4.439159999999999vw, 38px);
-    // left: clamp(5px, 2.3364vw, 20px);
+  }
+  &__loc-c {
+    position: absolute;
+    width: clamp(10px, 1.0416vw, 40px);
+    height: clamp(10px, 1.0416vw, 40px);
+    bottom: clamp(11px, 1.1457600000000001vw, 44px);
+    left: clamp(8px, 0.83328vw, 32px);
+    z-index: 3;
   }
 
   &__item {

@@ -3,21 +3,21 @@ import axios from "axios";
 
 import "../AutocompleteInput/style.scss";
 
-const AutocompleteInput = () => {
+const AutocompleteInput = (props) => {
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const [allStations, setAllStations] = useState([]); // Ensure this is always an array
+  const [allStations, setAllStations] = useState([]);
 
   useEffect(() => {
     const fetchStations = async () => {
       try {
         const response = await axios.get("http://localhost:5000/stations");
-        // Combine all station arrays into a single array
+
         const stationsArray = Object.values(response.data).flat();
         setAllStations(stationsArray);
       } catch (error) {
         console.error("Error fetching stations:", error);
-        setAllStations([]); // Fallback to an empty array in case of error
+        setAllStations([]);
       }
     };
 
@@ -25,11 +25,16 @@ const AutocompleteInput = () => {
   }, []);
 
   useEffect(() => {
-    if (input && Array.isArray(allStations)) {
-      const filteredSuggestions = allStations.filter((station) =>
-        station.title.toLowerCase().includes(input.toLowerCase())
-      );
-      setSuggestions(filteredSuggestions);
+    if (input.length >= 2 && Array.isArray(allStations)) {
+      const filteredAndSortedSuggestions = allStations
+        .filter((station) =>
+          station.title.toLowerCase().includes(input.toLowerCase())
+        )
+        .sort((a, b) =>
+          a.title.localeCompare(b.title, "ru", { sensitivity: "base" })
+        );
+
+      setSuggestions(filteredAndSortedSuggestions);
     } else {
       setSuggestions([]);
     }
@@ -51,7 +56,7 @@ const AutocompleteInput = () => {
         type="text"
         value={input}
         onChange={handleInputChange}
-        placeholder="Type to search for a station..."
+        placeholder={props.placeholder}
         className="calc__item"
       />
       {suggestions.length > 0 && (

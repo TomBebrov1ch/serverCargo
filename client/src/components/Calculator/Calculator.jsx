@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../Calculator/style.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaCalendar } from "react-icons/fa";
 import { TbArrowsUpDown } from "react-icons/tb";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 import Loc from "../../assets/healthicons_geo-location.svg";
 import Train from "../../assets/material-symbols_train.svg";
 import AutocompleteInput from "../AutocompleteInput/AutocompleteInput";
 
 const Calculator = () => {
+  const [startDate, setStartDate] = useState(null);
   return (
     <>
       <div className="calc">
@@ -14,17 +19,13 @@ const Calculator = () => {
           <div className="calc__input">
             <p className="calc__text">Станция отправления</p>
             <img src={Loc} alt="location" className="calc__loc" />
-            <AutocompleteInput />
+            <AutocompleteInput placeholder="Станция отправления" />
             <TbArrowsUpDown color="gray" className="calc__sort" />
           </div>
           <div className="calc__input">
             <p className="calc__text">Станция назначения</p>
             <img src={Loc} alt="location" className="calc__loc" />
-            <input
-              type="text"
-              placeholder="Станция назначения"
-              className="calc__item"
-            />
+            <AutocompleteInput placeholder="Станция назначения" />
             <TbArrowsUpDown color="gray" className="calc__sort" />
           </div>
           <div className="calc__input">
@@ -34,11 +35,13 @@ const Calculator = () => {
           </div>
           <div className="calc__input">
             <p className="calc__text">Выберите дату</p>
-            <img src={Loc} alt="location" className="calc__loc" />
-            <input
-              type="text"
-              placeholder="Выберите дату"
+            <FaCalendar className="calc__loc-c" color="#d9a441" />
+
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
               className="calc__item"
+              placeholderText="Выберите дату"
             />
           </div>
           <div className="calc__input">

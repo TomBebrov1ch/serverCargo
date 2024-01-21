@@ -48,10 +48,13 @@ function extractAndSortStations(data, priorityCountries) {
       country.regions.forEach((region) => {
         region.settlements.forEach((settlement) => {
           settlement.stations.forEach((station) => {
-            if (station.station_type === "train_station") {
+            if (
+              station.station_type === "station" ||
+              station.station_type === "train_station"
+            ) {
               stationsByCountry[country.title].push({
                 title: station.title,
-                esr_code: station.codes.esr_code,
+                esr_code: station.codes?.esr_code,
               });
             }
           });
@@ -60,11 +63,12 @@ function extractAndSortStations(data, priorityCountries) {
     }
   });
 
-  for (const countryTitle in stationsByCountry) {
+  // Sort each country's stations by title
+  Object.keys(stationsByCountry).forEach((countryTitle) => {
     stationsByCountry[countryTitle].sort((a, b) =>
-      a.title.localeCompare(b.title)
+      a.title.localeCompare(b.title, "ru")
     );
-  }
+  });
 
   return stationsByCountry;
 }
