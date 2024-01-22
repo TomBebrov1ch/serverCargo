@@ -1,22 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+
+import emailjs from "@emailjs/browser";
+import PopUp from "../PopUp/PopUp.jsx";
 
 import "../Form/style.scss";
 
 const Form = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result);
+          setShowPopup(true);
+        },
+        (error) => {
+          console.error(error.text);
+        }
+      );
+    setEmail("");
+    setName("");
+    setMessage("");
+  };
+
+  const togglePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
-    <form
-      className="form"
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
-      })}
-    >
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <nav className="form__content">
         <div className="form__card">
           <p className="form__text">Ваше имя*</p>
@@ -24,6 +54,8 @@ const Form = () => {
             placeholder="Иван Иванов"
             className="form__input"
             required={true}
+            onChange={(event) => setName(event.target.value)}
+            value={name}
           />
           {errors.name && <p>{errors.name.message}</p>}
         </div>
@@ -39,6 +71,8 @@ const Form = () => {
                 message: "Введите корректный email адрес",
               },
             })}
+            onChange={(event) => setEmail(event.target.value)}
+            value={email}
           />
           {errors.email && (
             <p className="form__error">{errors.email.message}</p>
@@ -50,12 +84,15 @@ const Form = () => {
             placeholder="Коментарий"
             className="form__input-s"
             required={true}
+            onChange={(event) => setMessage(event.target.value)}
+            value={message}
           />
         </div>
       </nav>
       <button className="form__button" type="submit">
         Отправить
       </button>
+      {showPopup && <PopUp isOpen={showPopup} toggleMenu={togglePopup} />}
     </form>
   );
 };

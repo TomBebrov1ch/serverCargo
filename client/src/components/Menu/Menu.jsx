@@ -1,6 +1,6 @@
 import React from "react";
 import Hamburger from "hamburger-react";
-import { Link as ScrollLink, Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { Fade, Slide } from "react-awesome-reveal";
 
 import "../Menu/menu.scss";
