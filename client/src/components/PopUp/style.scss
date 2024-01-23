@@ -1,1 +1,103 @@
 @import "../../styles/variables.scss";
+
+.popup-window {
+  width: 100%;
+}
+
+.window {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  width: clamp(175px, 81.774vw, 700px) !important;
+  height: clamp(225px, 105.13799999999999vw, 900px) !important;
+  border-radius: clamp(8px, 0.83328vw, 32px) !important;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__logo {
+      width: clamp(50px, 23.363999999999997vw, 200px);
+      height: clamp(60px, 28.0368vw, 240px);
+    }
+    &__first {
+      width: 70%;
+      text-align: center;
+      font-size: clamp(13.5px, 6.30828vw, 54px);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      color: $green;
+      line-height: clamp(20px, 9.3456vw, 80px);
+      margin-bottom: clamp(8px, 3.73824vw, 32px);
+    }
+    &__second {
+      width: 80%;
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 500;
+      font-size: clamp(9px, 4.20552vw, 36px);
+      color: $green;
+      margin-bottom: clamp(8px, 3.73824vw, 32px);
+    }
+    &__btn {
+      padding: clamp(7.5px, 3.5046vw, 30px);
+      width: clamp(115px, 53.737199999999994vw, 460px);
+      border: none;
+      background-color: $green;
+      color: $white;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(9px, 4.20552vw, 36px);
+      font-weight: 500;
+      margin-top: clamp(8px, 3.73824vw, 32px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .window {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    width: clamp(400px, 41.664vw, 1600px) !important;
+    height: clamp(225px, 23.436vw, 900px) !important;
+    border-radius: clamp(8px, 0.83328vw, 32px) !important;
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &__logo {
+        width: clamp(69px, 7.1870400000000005vw, 276px);
+        height: clamp(47.495px, 4.9470792vw, 189.98px);
+        margin-bottom: clamp(16px, 1.66656vw, 64px);
+      }
+      &__first {
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(16px, 1.66656vw, 64px);
+        font-weight: 700;
+        color: $green;
+        margin-bottom: clamp(8px, 0.83328vw, 32px);
+      }
+      &__second {
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(8px, 0.83328vw, 32px);
+        font-weight: 600;
+        color: $green;
+      }
+      &__btn {
+        padding: clamp(6px, 0.62496vw, 24px);
+        width: clamp(115px, 11.9784vw, 460px);
+        border: none;
+        background-color: $green;
+        color: $white;
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(8px, 0.83328vw, 32px);
+        font-weight: 700;
+        margin-top: clamp(8px, 3.73824vw, 32px);
+      }
+    }
+  }
+}

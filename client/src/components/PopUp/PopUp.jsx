@@ -3,24 +3,23 @@ import Popup from "reactjs-popup";
 import { Slide } from "react-awesome-reveal";
 
 import "../PopUp/style.scss";
-import "../PopUp/popup.scss";
 
 import logo from "../../assets/CARGO_LOGO 4.svg";
 
 const PopUp = (props) => {
   return (
-    <Popup
-      open={props.isOpen}
-      modal
-      nested
-      className="popup-window"
-      position="center center"
-      overlayStyle={{ background: "#f2f2f2" }}
-    >
-      <Slide direction="up">
+    <>
+      <Popup
+        open={props.isOpen}
+        modal
+        nested
+        className="popup-window"
+        position="center center"
+        overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+      >
         <div className="window">
           <div className="window__content">
-            <img src={logo} alt="logo" className="footer_m__logo" />
+            <img src={logo} alt="logo" className="window__content__logo" />
             <span className="window__content__first">
               Спасибо за вашу заявку!
             </span>
@@ -32,8 +31,8 @@ const PopUp = (props) => {
             </button>
           </div>
         </div>
-      </Slide>
-    </Popup>
+      </Popup>
+    </>
   );
 };
 

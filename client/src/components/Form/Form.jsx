@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import PopUp from "../PopUp/PopUp.jsx";
 
 import "../Form/style.scss";
+import { Slide } from "react-awesome-reveal";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -92,7 +93,9 @@ const Form = () => {
       <button className="form__button" type="submit">
         Отправить
       </button>
-      {showPopup && <PopUp isOpen={showPopup} toggleMenu={togglePopup} />}
+      <Slide direction="up" in={showPopup}>
+        <PopUp isOpen={showPopup} toggleMenu={togglePopup} />
+      </Slide>
     </form>
   );
 };
