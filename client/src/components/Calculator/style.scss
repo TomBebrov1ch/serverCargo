@@ -34,15 +34,15 @@
     height: clamp(12px, 5.60736vw, 48px);
     bottom: clamp(9.5px, 4.439159999999999vw, 38px);
   }
+
   &__loc-c {
     position: absolute;
-    width: clamp(10px, 1.0416vw, 40px);
-    height: clamp(10px, 1.0416vw, 40px);
-    bottom: clamp(11px, 1.1457600000000001vw, 44px);
-    left: clamp(8px, 0.83328vw, 32px);
+    width: clamp(9px, 4.20552vw, 36px);
+    height: clamp(9px, 4.20552vw, 36px);
+    bottom: clamp(10.5px, 4.90644vw, 42px);
+    left: clamp(1.5px, 0.70092vw, 6px);
     z-index: 3;
   }
-
   &__item {
     padding: clamp(10px, 4.6728vw, 40px);
     width: clamp(155px, 72.4284vw, 620px);
@@ -127,6 +127,8 @@
       text-align: left;
       text-indent: clamp(0.5px, 0.05208vw, 2px);
     }
+    &__item-s::placeholder {
+    }
 
     &__button {
       margin: auto;
@@ -153,7 +155,16 @@
       position: absolute;
       bottom: clamp(9px, 0.93744vw, 36px);
 
-      left: clamp(5px, 0.5208vw, 20px);
+      left: clamp(11px, 1.1457600000000001vw, 44px);
+    }
+
+    &__loc-c {
+      position: absolute;
+      width: clamp(10px, 1.0416vw, 40px);
+      height: clamp(10px, 1.0416vw, 40px);
+      bottom: clamp(11px, 1.1457600000000001vw, 44px);
+      left: clamp(11px, 1.1457600000000001vw, 44px);
+      z-index: 3;
     }
 
     &__sort {

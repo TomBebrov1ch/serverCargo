@@ -42,7 +42,7 @@ const MainScreen = () => {
                 Эффективная и надёжная доставка грузов
               </h1>
             </Fade>
-            <Fade direction="up" delay={200} triggerOnce>
+            <Fade direction="up" triggerOnce>
               <p className="main__second">
                 Будьте уверены в том, что ваш груз будет доставлен вовремя и в
                 целости с "Cargo Express PV". Наша компания предоставляет
@@ -53,12 +53,12 @@ const MainScreen = () => {
             </Fade>
             <div className="main__buttons">
               <Link smooth to="vagon">
-                <Fade direction="up" delay={300} triggerOnce>
+                <Fade direction="up" delay={200} triggerOnce>
                   <ButtonOur text={"Наши вагоны"} showImage={true} />
                 </Fade>
               </Link>
               <Link smooth to="about">
-                <Fade direction="up" delay={300} triggerOnce>
+                <Fade direction="up" delay={200} triggerOnce>
                   <ButtonMore text="Подробнее" className={"simple"} />
                 </Fade>
               </Link>

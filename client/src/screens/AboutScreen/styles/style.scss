@@ -79,7 +79,8 @@
   .about {
     background-image: url(../../../assets/about_bg.webp);
     &__separatop {
-      margin-top: clamp(0.5px, 0.05208vw, 2px);
+      // margin-top: clamp(0.5px, 0.05208vw, 2px);
+      margin-left: 0;
     }
     .about__card-pc {
       display: flex;
@@ -108,16 +109,22 @@
     &__text-s {
       text-align: left;
       font-size: clamp(20px, 2.0832vw, 80px);
+      margin-bottom: clamp(-32.5px, -3.3852vw, -130px);
     }
 
     &__par-s {
       text-align: left;
       font-size: clamp(9px, 0.93744vw, 36px);
-      width: 42%;
+      width: 31%;
       line-height: clamp(16.12px, 1.6790592000000002vw, 64.48px);
-      margin-top: clamp(8px, 0.83328vw, 32px);
+      margin-top: clamp(-5px, -0.5208vw, -20px);
     }
-    &__vagon__card {
+    &__vagon {
+    }
+    &__vagon__content {
+    }
+    &__par-s {
+      margin-left: 0;
     }
 
     &__advant {
