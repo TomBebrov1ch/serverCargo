@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import emailjs from "@emailjs/browser";
+
 import "../AutocompleteInput/style.scss";
 
 const AutocompleteInput = (props) => {
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [allStations, setAllStations] = useState([]);
+  const [firstStation, setFirtsStation] = useState("")
+  const [secondStation, setSecondStation] = useState("")
 
   useEffect(() => {
     const fetchStations = async () => {
@@ -50,13 +54,39 @@ const AutocompleteInput = (props) => {
     setSuggestions([]);
   };
 
+  const handleSubmit = (data, e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID_SECOND,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result);
+
+        },
+        (error) => {
+          console.error(error.text);
+        }
+      );
+    setFirtsStation("");
+    setSecondStation("");
+  };
+
   return (
     <div>
       <input
         type="text"
         value={input}
-        onChange={handleInputChange}
-        placeholder={props.placeholder}
+        name="firstStation"
+        onChange={(event) => {
+          handleInputChange(event);
+          setFirtsStation(event.target.value);
+        }}
         className="calc__item"
       />
       {suggestions.length > 0 && (

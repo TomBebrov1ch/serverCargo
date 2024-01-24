@@ -53,7 +53,7 @@ const Calculator = () => {
             />
           </div>
         </div>
-        <button className="calc__button">Расчитать</button>
+        <button className="calc__button" type="submit">Расчитать</button>
       </div>
     </>
   );

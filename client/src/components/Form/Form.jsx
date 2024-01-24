@@ -52,6 +52,7 @@ const Form = () => {
         <div className="form__card">
           <p className="form__text">Ваше имя*</p>
           <input
+            name="name"
             placeholder="Иван Иванов"
             className="form__input"
             required={true}
@@ -82,6 +83,7 @@ const Form = () => {
         <div className="form__card-s">
           <p className="form__text">Коментарий*</p>
           <input
+            name="message"
             placeholder="Коментарий"
             className="form__input-s"
             required={true}
