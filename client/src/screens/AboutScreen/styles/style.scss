@@ -79,8 +79,8 @@
   .about {
     background-image: url(../../../assets/about_bg.webp);
     &__separatop {
-      // margin-top: clamp(0.5px, 0.05208vw, 2px);
       margin-left: 0;
+      width: clamp(80px, 8.3328vw, 320px);
     }
     .about__card-pc {
       display: flex;
@@ -114,8 +114,9 @@
 
     &__par-s {
       text-align: left;
-      font-size: clamp(9px, 0.93744vw, 36px);
-      width: 31%;
+      font-family: "Open Sans", sans-serif;
+      font-size: clamp(10px, 1.0416vw, 40px);
+      width: 39%;
       line-height: clamp(16.12px, 1.6790592000000002vw, 64.48px);
       margin-top: clamp(-5px, -0.5208vw, -20px);
     }

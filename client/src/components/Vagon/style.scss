@@ -27,6 +27,8 @@
     &__text {
       font-size: clamp(17.5px, 1.8228vw, 70px);
       font-weight: 500;
+      margin-bottom: clamp(-50px, -5.208vw, -200px);
+      margin-left: clamp(-25px, -2.604vw, -100px);
     }
 
     &__img {

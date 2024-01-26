@@ -73,7 +73,9 @@
     border-radius: 10px;
     background-color: $white;
     box-shadow: 0px 4px 42px 0px rgba(0, 0, 0, 0.15);
-    height: clamp(225px, 23.436vw, 900px);
+    height: auto;
+    padding-bottom: clamp(16px, 1.66656vw, 64px);
+    padding-top: clamp(16px, 1.66656vw, 64px);
 
     &__content {
       display: flex;
@@ -95,7 +97,7 @@
     &__input {
       margin-bottom: clamp(2px, 0.20832vw, 8px);
       width: clamp(163.5px, 17.030160000000002vw, 654px);
-      padding: clamp(-2.5px, -0.2604vw, -10px);
+      padding: 0;
       font-size: clamp(8px, 0.83328vw, 32px);
       text-align: left;
       text-indent: 15px;
@@ -106,7 +108,7 @@
     &__input-s {
       margin-bottom: clamp(2px, 0.20832vw, 8px);
       width: clamp(367.5px, 38.278800000000004vw, 1470px);
-      padding: clamp(1px, 0.10416vw, 4px);
+      padding: 0;
       font-size: clamp(8px, 0.83328vw, 32px);
       text-align: left;
       text-indent: 15px;

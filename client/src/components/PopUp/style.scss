@@ -72,7 +72,7 @@
       &__logo {
         width: clamp(69px, 7.1870400000000005vw, 276px);
         height: clamp(47.495px, 4.9470792vw, 189.98px);
-        margin-bottom: clamp(16px, 1.66656vw, 64px);
+        margin-bottom: clamp(8px, 0.83328vw, 32px);
       }
       &__first {
         font-family: "Open Sans", sans-serif;
@@ -80,12 +80,14 @@
         font-weight: 700;
         color: $green;
         margin-bottom: clamp(8px, 0.83328vw, 32px);
+        line-height: clamp(20px, 2.0832vw, 80px);
       }
       &__second {
         font-family: "Open Sans", sans-serif;
         font-size: clamp(8px, 0.83328vw, 32px);
         font-weight: 600;
         color: $green;
+        margin-bottom: clamp(4px, 0.41664vw, 16px);
       }
       &__btn {
         padding: clamp(6px, 0.62496vw, 24px);
@@ -96,7 +98,7 @@
         font-family: "Open Sans", sans-serif;
         font-size: clamp(8px, 0.83328vw, 32px);
         font-weight: 700;
-        margin-top: clamp(8px, 3.73824vw, 32px);
+        margin-top: clamp(8px, 0.83328vw, 32px);
       }
     }
   }

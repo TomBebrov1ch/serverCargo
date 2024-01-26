@@ -84,8 +84,17 @@
       height: clamp(274.5px, 28.591920000000002vw, 1098px);
       position: absolute;
       left: clamp(440px, 45.830400000000004vw, 1760px);
-      bottom: clamp(95px, 9.8952vw, 380px);
+      top: clamp(200px, 20.832vw, 800px);
       z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    &__train-pc {
+      position: absolute;
+      bottom: clamp(160px, 16.6656vw, 640px);
     }
   }
 }
