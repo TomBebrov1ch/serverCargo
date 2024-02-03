@@ -30,8 +30,8 @@
     width: 90%;
     padding-top: clamp(8px, 3.73824vw, 32px);
     font-size: clamp(8px, 3.73824vw, 32px);
-    margin-bottom: clamp(16px, 7.47648vw, 64px);
     margin: auto;
+    padding-bottom: clamp(10.5px, 4.90644vw, 42px);
   }
 
   &__contacts {
@@ -56,6 +56,7 @@
       width: 86.6%;
       height: clamp(285px, 29.6856vw, 1140px);
       display: block;
+      margin: auto;
 
       &__text {
         margin-top: clamp(32px, 3.33312vw, 128px);

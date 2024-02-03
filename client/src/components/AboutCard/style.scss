@@ -3,7 +3,7 @@
 .card {
   width: 90%;
   margin: auto;
-  height: clamp(189px, 88.31591999999999vw, 756px);
+  height: auto;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -28,6 +28,14 @@
     font-size: clamp(12px, 5.60736vw, 48px);
     font-weight: 500;
   }
+  &__mainS {
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(12px, 5.60736vw, 48px);
+    font-weight: 500;
+    position: relative;
+    right: clamp(17.5px, 8.177399999999999vw, 70px);
+  }
 
   &__par {
     margin: auto;
@@ -42,8 +50,8 @@
 
 @media screen and (min-width: 1024px) {
   .card {
-    width: clamp(192.5px, 20.0508vw, 770px);
-    height: auto;
+    width: clamp(212.5px, 22.134vw, 850px);
+    height: clamp(237.5px, 24.738vw, 950px);
     margin-top: clamp(16px, 1.66656vw, 64px);
     padding-top: clamp(16px, 1.66656vw, 64px);
     padding-bottom: clamp(16px, 1.66656vw, 64px);
@@ -51,11 +59,13 @@
       margin-top: 1px;
       width: clamp(46.5px, 4.84344vw, 186px);
       height: clamp(46.5px, 4.84344vw, 186px);
-      margin-right: clamp(92.5px, 9.6348vw, 370px);
+      margin-right: clamp(107.5px, 11.1972vw, 430px);
     }
 
     &__text {
       margin-top: clamp(8px, 0.83328vw, 32px);
+      width: 60%;
+      margin-right: clamp(25px, 2.604vw, 100px);
     }
 
     &__main {

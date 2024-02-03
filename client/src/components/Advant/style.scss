@@ -16,7 +16,17 @@
     font-size: clamp(9.5px, 4.439159999999999vw, 38px);
     width: 80%;
     position: absolute;
-    top: clamp(20px, 9.3456vw, 80px);
+    top: clamp(30px, 14.0184vw, 120px);
+    line-height: clamp(15.31px, 7.1540568vw, 61.24px);
+  }
+  &__text-s {
+    color: $white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: clamp(9.5px, 4.439159999999999vw, 38px);
+    width: 80%;
+    position: absolute;
+    top: clamp(37.5px, 17.523vw, 150px);
     line-height: clamp(15.31px, 7.1540568vw, 61.24px);
   }
 
@@ -39,7 +49,18 @@
       font-size: clamp(9.5px, 0.9895200000000001vw, 38px);
       line-height: clamp(13px, 1.35408vw, 52px);
       position: absolute;
-      top: clamp(16.5px, 1.71864vw, 66px);
+      top: clamp(25px, 2.604vw, 100px);
+    }
+    &__text-s {
+      width: 70%;
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: clamp(9.5px, 0.9895200000000001vw, 38px);
+      line-height: clamp(13px, 1.35408vw, 52px);
+      position: absolute;
+      top: clamp(30px, 3.1248vw, 120px);
+      color: $white2;
     }
 
     &__img {

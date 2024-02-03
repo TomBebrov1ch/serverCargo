@@ -53,7 +53,7 @@ const Form = () => {
           <p className="form__text">Ваше имя*</p>
           <input
             name="name"
-            placeholder="Иван Иванов"
+            placeholder="Рауан Онгарбаев"
             className="form__input"
             required={true}
             onChange={(event) => setName(event.target.value)}
