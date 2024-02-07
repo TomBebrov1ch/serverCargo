@@ -111,6 +111,10 @@ footer {
     text-align: center;
     margin-bottom: clamp(16px, 1.66656vw, 64px);
   }
+  .footer__logo-pc {
+    width: clamp(100px, 10.416vw, 400px);
+    height: clamp(50px, 5.208vw, 200px);
+  }
 
   .footer {
     display: flex;
@@ -124,12 +128,18 @@ footer {
       position: relative;
       left: clamp(32px, 3.33312vw, 128px);
     }
+    &__logo:hover {
+      cursor: pointer;
+    }
 
     &__nav {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 80%;
+    }
+    &__nav:hover {
+      cursor: pointer;
     }
     &__text {
       font-size: clamp(10.5px, 1.09368vw, 42px);
@@ -151,6 +161,11 @@ footer {
       border-radius: 40px;
       position: relative;
       left: clamp(160px, 16.6656vw, 640px);
+      transition: 0.3s all;
+    }
+    &__btn:hover {
+      cursor: pointer;
+      background-color: #dbdbdb;
     }
   }
 }

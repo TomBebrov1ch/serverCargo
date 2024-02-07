@@ -139,6 +139,10 @@
         font-family: "Open Sans", sans-serif;
         font-size: clamp(10px, 1.0416vw, 40px);
       }
+      &__btn:hover {
+        cursor: pointer;
+        background-color: $gold2;
+      }
     }
 
     &__advant__cards {

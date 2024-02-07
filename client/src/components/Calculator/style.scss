@@ -143,10 +143,13 @@
       font-family: "Open Sans", sans-serif;
       font-size: clamp(10px, 1.0416vw, 40px);
       font-weight: 600;
-
       text-align: center;
       transition: 0.3s ease;
       color: $dark;
+    }
+    &__button:hover {
+      cursor: pointer;
+      background-color: $gold2;
     }
 
     &__loc {

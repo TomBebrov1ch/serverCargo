@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../Calculator/style.scss";
 import emailjs from "@emailjs/browser";
 import { FaCalendar } from "react-icons/fa";
 import { TbArrowsUpDown } from "react-icons/tb";
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import ru from "date-fns/locale/ru";
 
 import Loc from "../../assets/healthicons_geo-location.svg";
 import Train from "../../assets/material-symbols_train.svg";
 import AutocompleteInput from "../AutocompleteInput/AutocompleteInput";
 
+registerLocale("ru", ru);
 const Calculator = () => {
   const [startDate, setStartDate] = useState(null);
   const [firstStation, setFirtsStation] = useState("");
   const [secondStation, setSecondStation] = useState("");
   const [selectedCargo, setSelectedCargo] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
 
@@ -72,6 +73,26 @@ const Calculator = () => {
     setIsOpen(false);
   };
 
+  const handleCargoInputFocus = () => {
+    setFilteredSuggestions(keywords);
+    setIsOpen(true);
+  };
+
+  const handleClickOutside = (event) => {
+    if (!containerRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -92,26 +113,24 @@ const Calculator = () => {
               <p className="calc__text">Станция назначения</p>
               <img src={Loc} alt="location" className="calc__loc" />
               <AutocompleteInput
-                placeholder="Станция отправления"
+                placeholder="Станция назначения"
                 name="secondStation"
                 value={secondStation}
                 onChange={handleSelectSecondStation}
               />
               <TbArrowsUpDown color="gray" className="calc__sort" />
             </div>
-            <div className="calc__input">
+            <div className="calc__input" ref={containerRef}>
               <p className="calc__text">Тип п/с</p>
               <img src={Train} alt="location" className="calc__loc" />
               <input
                 type="text"
-                placeholder="Зерновоз"
+                placeholder="Выберите тип поезда"
                 className="calc__item"
                 name="selectedCargo"
                 value={selectedCargo}
-                onChange={(e) => {
-                  handleSelectCargo(e.target.value);
-                  setIsOpen(true);
-                }}
+                onChange={(e) => setSelectedCargo(e.target.value)}
+                onFocus={handleCargoInputFocus}
               />
               {isOpen && (
                 <ul className="auto">
@@ -138,20 +157,21 @@ const Calculator = () => {
                 placeholderText="Выберите дату"
                 value={startDate}
                 name="date"
+                locale="ru"
               />
             </div>
             <div className="calc__input">
-              <p className="calc__text">Код / Наименование груза по ЕТСНГ</p>
+              <p className="calc__text">Наименование груза по ЕТСНГ</p>
               <input
                 type="text"
-                placeholder="Выберите Код / Наименование груза"
+                placeholder="Наименование груза"
                 className="calc__item-s"
                 name="cargo"
               />
             </div>
           </div>
           <button className="calc__button" type="submit">
-            Расчитать
+            Рассчитать
           </button>
         </div>
       </form>

@@ -31,6 +31,7 @@
 
 .button__item:hover {
   background-color: $gold2;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {

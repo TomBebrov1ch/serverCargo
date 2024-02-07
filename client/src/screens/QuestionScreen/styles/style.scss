@@ -121,6 +121,22 @@
         position: relative;
         bottom: clamp(1.5px, 0.15624vw, 6px);
       }
+      &__num {
+        text-decoration: none;
+        color: $dark;
+        font-size: clamp(10px, 1.0416vw, 40px);
+      }
+      &__num:hover {
+        text-decoration: underline;
+      }
+      &__mail {
+        color: $dark;
+        text-decoration: none;
+        font-size: clamp(10px, 1.0416vw, 40px);
+      }
+      &__mail:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

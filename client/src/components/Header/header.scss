@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .header {
   width: 90%;
@@ -18,7 +18,8 @@
     height: clamp(26.635px, 12.4460028vw, 106.54px);
   }
 
-  &__hamburger {}
+  &__hamburger {
+  }
 }
 
 .pc-screen {
@@ -39,17 +40,17 @@
     margin: auto;
     margin-top: clamp(25px, 2.604vw, 100px);
 
-
     &__logo {
       width: clamp(69px, 7.1870400000000005vw, 276px);
       height: clamp(47.495px, 4.9470792vw, 189.98px);
     }
-
+    &__content:hover {
+      cursor: pointer;
+    }
     &__content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       &__text-s {
         display: flex;
         text-indent: clamp(20px, 2.0832vw, 80px);
@@ -57,7 +58,7 @@
 
       &__text {
         color: $dark;
-        font-family: 'Rubik', sans-serif;
+        font-family: "Rubik", sans-serif;
         font-size: clamp(10.5px, 1.09368vw, 42px);
       }
 
@@ -70,6 +71,11 @@
         font-family: "Open Sans", sans-serif;
         font-size: clamp(10px, 1.0416vw, 40px);
         border-radius: 40px;
+        transition: 0.3s all;
+      }
+      &__button:hover {
+        cursor: pointer;
+        background-color: #024d39;
       }
     }
   }

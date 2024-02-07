@@ -119,6 +119,11 @@
       padding: clamp(7.5px, 0.7812vw, 30px);
       font-family: "Open Sans", sans-serif;
       font-size: clamp(10px, 1.0416vw, 40px);
+      transition: 0.3s all;
+    }
+    &__button:hover {
+      cursor: pointer;
+      background-color: #024d39;
     }
   }
 }

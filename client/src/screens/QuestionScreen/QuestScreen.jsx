@@ -1,7 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
-import copy from "clipboard-copy";
 
 import "../AboutScreen/styles/style.scss";
 
@@ -25,11 +24,18 @@ const Quest = () => {
           <div className="quest__contacts">
             <div className="quest__contacts__f">
               <FaWhatsapp color="green" className="quest__contacts__i" />
-              <p className="quest__contacts__num">+7 (775) 993-25-87</p>
+              <a href="tel:+77015465788" className="quest__contacts__num">
+                +7 (701) 546 57-88
+              </a>
             </div>
             <div className="quest__contacts__s">
               <CiMail color="green" className="quest__contacts__i" />
-              <p className="quest__contacts__mail">ruslanmakhmatov@gmail.com</p>
+              <a
+                href="mailto: ceo@cargopv.kz"
+                className="quest__contacts__mail"
+              >
+                ceo@cargopv.kz
+              </a>
             </div>
           </div>
         </nav>

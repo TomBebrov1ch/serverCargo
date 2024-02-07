@@ -81,10 +81,10 @@ const Form = () => {
           )}
         </div>
         <div className="form__card-s">
-          <p className="form__text">Коментарий*</p>
+          <p className="form__text">Комментарий*</p>
           <input
             name="message"
-            placeholder="Коментарий"
+            placeholder="Комментарий"
             className="form__input-s"
             required={true}
             onChange={(event) => setMessage(event.target.value)}

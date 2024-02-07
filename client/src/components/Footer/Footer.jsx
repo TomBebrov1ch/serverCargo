@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import "../Footer/style.scss";
 
 import logo from "../../assets/CARGO_LOGO 4.svg";
+import spark from "../../assets/spark_logo.svg";
 
 const Footer = () => {
   return (
@@ -33,7 +34,9 @@ const Footer = () => {
         </nav>
       </section>
       <div className="footer">
-        <img src={logo} alt="logo" className="footer__logo" />
+        <Link smooth to="main">
+          <img src={logo} alt="logo" className="footer__logo" />
+        </Link>
         <nav className="footer__nav">
           <Link smooth to="main">
             <h1 className="footer__text">Главная</h1>
@@ -55,6 +58,9 @@ const Footer = () => {
       <section className="footer__items-pc">
         <hr className="footer__separator-pc" />
         <p className="footer__com-pc">©Cargo Express PV 2024</p>
+        <a href="https://sparkstudio.kz/">
+          <img src={spark} alt="comp" className="footer__logo-pc" />
+        </a>
       </section>
     </footer>
   );
