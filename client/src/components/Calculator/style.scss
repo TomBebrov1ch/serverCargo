@@ -43,6 +43,7 @@
     left: clamp(1.5px, 0.70092vw, 6px);
     z-index: 3;
   }
+
   &__item {
     padding: clamp(10px, 4.6728vw, 40px);
     width: clamp(155px, 72.4284vw, 620px);
@@ -85,6 +86,7 @@
     text-align: center;
     margin-top: clamp(16px, 7.47648vw, 64px);
     margin-left: clamp(34px, 15.887519999999999vw, 136px);
+    color: $dark;
   }
 }
 
@@ -101,6 +103,7 @@
       width: 80%;
       margin: auto;
     }
+
     &__input {
       padding-left: 10px;
     }
@@ -127,8 +130,8 @@
       text-align: left;
       text-indent: clamp(0.5px, 0.05208vw, 2px);
     }
-    &__item-s::placeholder {
-    }
+
+    &__item-s::placeholder {}
 
     &__button {
       margin: auto;
@@ -147,6 +150,7 @@
       transition: 0.3s ease;
       color: $dark;
     }
+
     &__button:hover {
       cursor: pointer;
       background-color: $gold2;

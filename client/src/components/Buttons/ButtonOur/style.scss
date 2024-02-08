@@ -16,6 +16,7 @@
     font-size: clamp(10px, 4.6728vw, 40px);
     text-align: center;
     transition: 0.3s ease;
+    color: $dark;
   }
 
   &__img {
@@ -26,6 +27,7 @@
   &__text {
     position: relative;
     left: clamp(3px, 1.40184vw, 12px);
+    color: $dark;
   }
 }
 

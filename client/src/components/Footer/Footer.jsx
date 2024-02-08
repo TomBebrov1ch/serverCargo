@@ -28,10 +28,13 @@ const Footer = () => {
             <button className="footer_m__btn">Вверх</button>
           </Link>
         </nav>
-        <nav className="footer_m__items">
+        <div className="footer_m__items">
           <hr className="footer_m__separator" />
           <p className="footer_m__com">©Cargo Express PV 2024</p>
-        </nav>
+          <a href="https://sparkstudio.kz/">
+            <img src={spark} alt="" className="footer_m__logo-s" />
+          </a>
+        </div>
       </section>
       <div className="footer">
         <Link smooth to="main">
