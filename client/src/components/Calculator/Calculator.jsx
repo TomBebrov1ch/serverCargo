@@ -6,10 +6,12 @@ import { TbArrowsUpDown } from "react-icons/tb";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ru from "date-fns/locale/ru";
+import PopUp from "../PopUp/PopUp";
 
 import Loc from "../../assets/healthicons_geo-location.svg";
 import Train from "../../assets/material-symbols_train.svg";
 import AutocompleteInput from "../AutocompleteInput/AutocompleteInput";
+import { Slide } from "react-awesome-reveal";
 
 registerLocale("ru", ru);
 const Calculator = () => {
@@ -19,6 +21,7 @@ const Calculator = () => {
   const [selectedCargo, setSelectedCargo] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   const keywords = [
     "Крытый вагон",
@@ -92,6 +95,10 @@ const Calculator = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
 
   return (
     <>
@@ -171,8 +178,11 @@ const Calculator = () => {
             </div>
           </div>
           <button className="calc__button" type="submit">
-            Рассчитать
+            Отправить
           </button>
+          <Slide direction="up" in={showPopup}>
+            <PopUp isOpen={showPopup} toggleMenu={togglePopup} />
+          </Slide>
         </div>
       </form>
     </>
