@@ -29,7 +29,7 @@ const HomePage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          "Cargo PV: Ваш Надежный Партнер в Международных Грузоперевозках из Центральной Азии"
+          Cargo PV: Ваш Надежный Партнер в Международных Грузоперевозках из Центральной Азии
         </title>
         <meta
           property="og:title"

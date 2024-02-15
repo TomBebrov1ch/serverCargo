@@ -158,9 +158,6 @@ footer {
       width: 80%;
     }
 
-    &__nav:hover {
-      cursor: pointer;
-    }
 
     &__text {
       font-size: clamp(10.5px, 1.09368vw, 42px);
@@ -169,6 +166,12 @@ footer {
       color: $white;
       font-size: clamp(10.5px, 1.09368vw, 42px);
       font-weight: 400;
+      transition: 0.3s all;
+    }
+
+    &__text:hover {
+      cursor: pointer;
+      color: #C8C8C8;
     }
 
     &__btn {
