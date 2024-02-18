@@ -9,8 +9,8 @@ import First from "../../assets/Group 9.svg";
 import Search from "../../assets/Group 25.svg";
 import Train from "../../assets/Group 27.svg";
 import Shield from "../../assets/Group 29.svg";
-import firstVag from "../../assets/Services.webp";
-import secondVag from "../../assets/Group-454.webp";
+import firstVag from "../../assets/Group 454.png";
+import secondVag from "../../assets/Frame 45.png";
 import thirdVag from "../../assets/Frame-45.webp";
 import fourVag from "../../assets/Group-454 (1).webp";
 
